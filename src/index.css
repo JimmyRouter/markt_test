@@ -1,0 +1,7 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.product_container:nth-child(2n) {
+    flex-basis: 100%;
+}
