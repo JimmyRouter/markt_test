@@ -21,11 +21,12 @@ export function ShopPage () {
     const catalog = useLoaderData() as ICategory[]
 
     return (
-        <div className="shoppage container flex flex-col flex-nowrap items-start gap-10 mt-2 mx-auto w-full px-8'"
+        <div className="shoppage container flex flex-col flex-nowrap items-start gap-10 mt-2 mx-auto w-9/12 px-8'"
              id="maindiv">
             <HeaderBar></HeaderBar>
             <h1>КАТАЛОГ</h1>
             <List
+                className={"w-full gap-4"}
                 itemLayout="vertical"
                 size="large"
                 pagination={{
