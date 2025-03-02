@@ -22,7 +22,7 @@ export function CartProductInline({prod}: {prod:ICartProduct }) {
     }
     return(
         <div className={"container inline-flex mb-10 justify-between"}>
-            <div className="w-2/12 flex flex-col items-center">
+            <div className="w-full flex flex-col items-center">
                 <Image src={MY_API_ENDPOINT + prod.product.img} alt="alt" preview={false} className={"w-full object-contain max-h-24"}/>
                 <Rate defaultValue={prod.product.rating?.value} disabled key="rate" className="w-full inline-flex justify-center"/>
             </div>

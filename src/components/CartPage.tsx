@@ -14,7 +14,7 @@ export function CartPage(){
     return  (
         <div className='container flex flex-col flex-nowrap items-start gap-10 mt-2 w-full px-4'>
             <HeaderBar></HeaderBar>
-            <List className='list_ant_elem flex flex-col w-9/12'
+            <List className='list_ant_elem flex flex-col w-full'
                   itemLayout="vertical"
                   size="large"
                   bordered={true}
