@@ -12,9 +12,9 @@ export function CartPage(){
     const dispatch = useDispatch()
     const cartState = useSelector((state:RootState) => state)
     return  (
-        <div className='categorypage container flex flex-col flex-nowrap items-start gap-10 mt-2 w-full px-4'>
+        <div className='container flex flex-col flex-nowrap items-start gap-10 mt-2 w-full px-4'>
             <HeaderBar></HeaderBar>
-            <List className='list_ant_elem flex flex-col'
+            <List className='list_ant_elem flex flex-col w-9/12'
                   itemLayout="vertical"
                   size="large"
                   bordered={true}
@@ -32,14 +32,14 @@ export function CartPage(){
                       />
                   )}
             />
-            <div>
+            <div className={"w-full flex gap-4"}>
                 <button
-                    className={'w-24 h-8 bg-red-400 rounded-xl'}
+                    className={'w-36 h-10 bg-red-400 rounded-xl'}
                     onClick={(event) => dispatch(cartClear(cartState))}
                 >
                     Очистить корзину
                 </button>
-                <button className={'w-24 h-8 bg-yellow-400 rounded-xl'}>
+                <button className={'w-36 h-10 bg-yellow-400 rounded-xl'}>
                     Оплатить
                 </button>
             </div>

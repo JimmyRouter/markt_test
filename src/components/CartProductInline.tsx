@@ -14,7 +14,7 @@ export function CartProductInline({prod}: {prod:ICartProduct }) {
     const [amount, setAmount] = useState<number>(prod.amount);
     const cartItems= [
         {
-            label: <strong>{prod.product.tittle}</strong>,
+            label: <strong>{prod.product.title}</strong>,
             children: <p>{prod.product.description}</p>,
         },]
     const onChangeAmount: InputNumberProps['onChange'] = (value) => {
@@ -36,7 +36,7 @@ export function CartProductInline({prod}: {prod:ICartProduct }) {
                 <div className={"inline-flex justify-between gap-2 w-full max-h-24"}>
                     <div className={"w-3/12"}>
                         <strong>
-                            {prod.product.price} &#8377;
+                            {prod.product.price?? 100} &#8377;
                         </strong>
                     </div>
                     <div className={"w-6/12 inline-flex gap-5 justify-end"}>
@@ -51,7 +51,7 @@ export function CartProductInline({prod}: {prod:ICartProduct }) {
                         <span>шт</span>
                     </div>
                     <div>
-                        <span>{prod.product.price * amount}  &#8377;</span>
+                        <span>{prod.product.price?? 100 * amount}  &#8377;</span>
                     </div>
                     <DeleteOutlined
                         className="bg-amber-400 rounded h-10 w-16 text-3xl inline-flex justify-center items-center"

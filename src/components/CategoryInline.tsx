@@ -13,7 +13,7 @@ export function CategoryInline({cat}: {cat: ICategory }){
                 state={{ 'cat':cat }}
             >
                 <strong className={"w-full inline-flex justify-center"}>
-                    {cat.tittle}
+                    {cat.title}
                 </strong>
                 <div className={"inline-flex  justify-center items-center w-full"}>
                     <Image src={MY_API_ENDPOINT + cat.img} className={"w-3/12  max-h-24 object-contain bg-transparent"} />

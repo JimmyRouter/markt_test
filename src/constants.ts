@@ -1,1 +1,1 @@
-export const MY_API_ENDPOINT: string = "http://127.0.0.1:8800/"
+export const MY_API_ENDPOINT: string = "http://localhost:8801"

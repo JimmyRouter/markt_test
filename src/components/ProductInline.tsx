@@ -14,7 +14,7 @@ export function ProductInline({prod}: {prod: IProduct }) {
     const [amount, setAmount] = useState<number>(1);
     const colapsItems= [
         {
-            label: <strong>{prod.tittle}</strong>,
+            label: <strong>{prod.title}</strong>,
             children: <p>{prod.description}</p>,
         },]
     const cart_prod: ICartProduct = {product:prod, category_id:Number(params.cat_id), amount:amount}
@@ -23,7 +23,7 @@ export function ProductInline({prod}: {prod: IProduct }) {
     }
     return(
         <div className={"product container inline-flex mb-10 justify-between"}>
-            <div className="w-2/12 flex flex-col items-center">
+            <div className="w-3/12 flex flex-col items-center">
                 <Image src={MY_API_ENDPOINT + prod.img} alt="alt" preview={false} className={"w-full object-contain max-h-24"}/>
                 <Rate defaultValue={prod.rating?.value} disabled key="rate" className="w-full inline-flex justify-center"/>
             </div>
@@ -37,7 +37,7 @@ export function ProductInline({prod}: {prod: IProduct }) {
                 <div className={"inline-flex justify-between gap-2 w-full max-h-24"}>
                     <div className={"w-3/12"}>
                         <strong>
-                            {prod.price} &#8377;
+                            {prod.price?? 100} &#8377;
                         </strong>
                     </div>
                     <div className={"w-6/12 inline-flex gap-5 justify-end"}>

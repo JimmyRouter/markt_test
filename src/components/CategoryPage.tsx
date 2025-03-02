@@ -10,9 +10,9 @@ export function CategoryPage() {
     return (
         <div className='categorypage container flex flex-col flex-nowrap items-start gap-10 mt-2 mx-auto w-full px-8'>
             <HeaderBar></HeaderBar>
-            <strong>{props.tittle}</strong>
+            <strong>{props.title}</strong>
             <strong>{props.description}</strong>
-            <List className='list_ant_elem flex flex-col'
+            <List className='list_ant_elem flex flex-col w-6/12'
                   itemLayout="vertical"
                   size="large"
                   bordered={true}

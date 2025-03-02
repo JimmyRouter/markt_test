@@ -6,7 +6,7 @@ export interface IShop {
 
 export interface ICategory{
     _id:number
-    tittle:string
+    title:string
     description:string
     img?: string
     products?:IProduct[]
@@ -14,7 +14,7 @@ export interface ICategory{
 
 export interface IProduct{
     _id: number|string
-    tittle: string
+    title: string
     price: number
     description?: string
     img?:string
