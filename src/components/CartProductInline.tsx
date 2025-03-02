@@ -26,7 +26,7 @@ export function CartProductInline({prod}: {prod:ICartProduct }) {
                 <Image src={MY_API_ENDPOINT + prod.product.img} alt="alt" preview={false} className={"w-full object-contain max-h-24"}/>
                 <Rate defaultValue={prod.product.rating?.value} disabled key="rate" className="w-full inline-flex justify-center"/>
             </div>
-            <div className={"flex flex-col gap-5 w-9/12"}>
+            <div className={"flex flex-col gap-5 w-full"}>
                 <Collapse
                     expandIconPosition={"end"}
                     bordered={true}

@@ -12,7 +12,7 @@ export function CategoryPage() {
             <HeaderBar></HeaderBar>
             <strong>{props.title}</strong>
             <strong>{props.description}</strong>
-            <List className='list_ant_elem flex flex-col w-6/12'
+            <List className='list_ant_elem flex flex-col w-full'
                   itemLayout="vertical"
                   size="large"
                   bordered={true}

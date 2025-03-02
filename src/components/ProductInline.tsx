@@ -23,11 +23,11 @@ export function ProductInline({prod}: {prod: IProduct }) {
     }
     return(
         <div className={"product container inline-flex mb-10 justify-between"}>
-            <div className="w-3/12 flex flex-col items-center">
+            <div className="w-full flex flex-col items-center">
                 <Image src={MY_API_ENDPOINT + prod.img} alt="alt" preview={false} className={"w-full object-contain max-h-24"}/>
                 <Rate defaultValue={prod.rating?.value} disabled key="rate" className="w-full inline-flex justify-center"/>
             </div>
-            <div className={"flex flex-col gap-5 w-9/12"}>
+            <div className={"flex flex-col gap-5 w-6/12"}>
                 <Collapse
                     expandIconPosition={"end"}
                     bordered={true}
