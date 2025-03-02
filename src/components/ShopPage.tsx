@@ -10,7 +10,7 @@ import {HeaderBar} from "./HeaderBar";
 
 export async function loader(shop_id: string | undefined){
     console.log('shoppage shopid got>>>>>', shop_id)
-    console.log('shoppage shopid got>>type>>>', typeof(shop_id))
+    console.log('API URL:', MY_API_ENDPOINT);
     const shop = await axios.get<IShop>(MY_API_ENDPOINT + 'shops/' + shop_id )
     const catalog = shop.data.catalog
     console.log('shop_page catalog obj>>>>>', catalog)
